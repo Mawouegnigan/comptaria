@@ -1,0 +1,1 @@
+enum ModeTheme { clair, sombre, couleur }

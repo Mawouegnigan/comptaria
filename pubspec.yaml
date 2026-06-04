@@ -1,0 +1,84 @@
+name: comptaria
+description: Application mobile centralisant 3 plans comptables — Plan Comptable de l'État Béninois, Plan Comptable Communal du Bénin, SYSCOHADA Révisé.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ─── State Management ───────────────────────────────────────────
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # ─── Navigation ─────────────────────────────────────────────────
+  go_router: ^14.2.7
+
+  # ─── Base de données locale (SQLite) ────────────────────────────
+  drift: ^2.18.0
+  drift_flutter: ^0.2.1
+  sqlite3_flutter_libs: ^0.5.24
+
+  # ─── Sérialisation / JSON ────────────────────────────────────────
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # ─── UI & Design ────────────────────────────────────────────────
+  flutter_svg: ^2.0.10+1
+  google_fonts: ^6.2.1
+  gap: ^3.0.1
+  shimmer: ^3.0.0
+  flutter_animate: ^4.5.0
+  cached_network_image: ^3.4.0
+
+  # ─── Recherche & Filtres ─────────────────────────────────────────
+  fuzzy: ^0.5.1
+
+  # ─── Utilitaires ────────────────────────────────────────────────
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  collection: ^1.18.0
+  intl: ^0.20.2
+  logger: ^2.4.0
+  package_info_plus: ^8.0.2
+  share_plus: ^10.0.2
+  http: ^1.2.0
+  url_launcher: ^6.3.0
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # ─── Code Generation ─────────────────────────────────────────────
+  build_runner: ^2.4.12
+  riverpod_generator: ^2.4.3
+  drift_dev: ^2.18.0
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+  custom_lint: 0.7.3
+  riverpod_lint: ^2.3.13
+
+  # ─── Tests ───────────────────────────────────────────────────────
+  mocktail: ^1.0.4
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/etat_benin/
+    - assets/data/communal_benin/
+    - assets/data/syscohada/
+    - assets/fonts/
+    - assets/images/
+
+  # fonts:
+  #   - family: NomPolice
+  #     fonts:
+  #       - asset: assets/fonts/NomPolice-Regular.ttf
